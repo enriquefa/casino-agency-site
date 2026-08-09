@@ -1,7 +1,6 @@
-import Script from 'next/script'
+import React from 'react'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
 import { GoogleTagManager } from '@next/third-parties/google'
 import './globals.css'
 
@@ -30,13 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth bg-background">
       <head>
-        <meta name="facebook-domain-verification" content="83yvukhvdmsf46cicdw4n8ag9n93dv" />
-        <GoogleTagManager gtmId="GTM-WQBRXFB7" />
+        <GoogleTagManager gtmId="GTM-KSBJKQ3S" />
       </head>
       
       <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-background`}>
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
   )
