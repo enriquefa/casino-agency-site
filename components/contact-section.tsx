@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { MapPin, Mail, Send } from "lucide-react"
+import { MapPin, Mail, Send, MessageSquare, Zap } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
@@ -11,6 +11,7 @@ export function ContactSection() {
     name: "",
     email: "",
     website: "",
+    budget: "$10k - $50k/mo",
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -27,11 +28,13 @@ export function ContactSection() {
     setIsSubmitting(false)
     if (res.ok) {
       setIsSubmitted(true)
-      setFormState({ name: "", email: "", website: "", message: "" }) 
+      setFormState({ name: "", email: "", website: "", budget: "$10k - $50k/mo", message: "" }) 
       
       // 🚀 Push event to Google Tag Manager dataLayer
-      window.dataLayer = window.dataLayer || [];
-      window.dataLayer.push({ event: 'contact_form_success' });
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || []
+        window.dataLayer.push({ event: 'contact_form_success' })
+      }
     } else {
       alert("Something went wrong. Please try again.")
     }
@@ -39,8 +42,12 @@ export function ContactSection() {
 
   const accentColor = "#f6b848"
 
+  const supportedPlatforms = [
+    "Meta Ads", "Google Ads", "TikTok", "Taboola", "Coinzilla", "Voluum", "RedTrack"
+  ]
+
   return (
-    <section id="contact" className="py-24 md:py-32">
+    <section id="contact" className="py-24 md:py-32 relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Centered Title Section */}
         <motion.div
@@ -58,17 +65,17 @@ export function ContactSection() {
               borderColor: `${accentColor}30`
             }}
           >
-            Contact
+            Contact & Scale
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
             Let&apos;s Engineer Your <span style={{ color: accentColor }}>Scale Engine</span>
           </h2>
         </motion.div>
 
-        {/* Two-Column Grid with responsive ordering: Form appears first on mobile, info on left on desktop */}
+        {/* Two-Column Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
-          {/* Info Block: order-2 on mobile (below form), lg:order-1 on desktop (left side) */}
+          {/* Info Block */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,42 +85,80 @@ export function ContactSection() {
           >
             <div className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to scale your casino, sportsbook, or crypto brand without risking your ad accounts? Drop your details below to lock in a compliance-first performance consultation with our growth team.
+                Ready to scale your casino, sportsbook, or crypto brand without risking your ad accounts? Lock in a performance consultation with our growth team.
               </p>
 
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">
-                  Growth Partnerships
-                </h3>
-                <p className="text-muted-foreground">Strategy & Performance</p>
-                <a
-                  href="mailto:growth@maroteagency.com"
-                  className="hover:underline inline-flex items-center gap-2 mt-1 justify-center lg:justify-start"
-                  style={{ color: accentColor }}
-                >
-                  <Mail className="w-4 h-4" />
-                
-                </a>
+              {/* Direct Channels */}
+              <div className="grid sm:grid-cols-2 gap-6 w-full text-left">
+                <div className="p-4 rounded-xl bg-card border border-border">
+                  <h3 className="text-sm font-semibold text-foreground mb-1 flex items-center gap-2">
+                    <Mail className="w-4 h-4" style={{ color: accentColor }} /> Growth Email
+                  </h3>
+                  <a
+                    href="mailto:growth@maroteagency.com"
+                    className="text-sm hover:underline font-medium break-all"
+                    style={{ color: accentColor }}
+                  >
+                    growth@maroteagency.com
+                  </a>
+                </div>
+
+                <div className="p-4 rounded-xl bg-card border border-border">
+                  <h3 className="text-sm font-semibold text-foreground mb-1 flex items-center gap-2">
+                    <MessageSquare className="w-4 h-4" style={{ color: accentColor }} /> Direct Telegram
+                  </h3>
+                  <a
+                    href="https://t.me/Adsblackjack"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm hover:underline font-medium"
+                    style={{ color: accentColor }}
+                  >
+                    @Adsblackjack
+                  </a>
+                </div>
               </div>
 
-              <div>
-                <h3 className="text-lg font-semibold text-foreground mb-4">Offices</h3>
-                <div className="space-y-4">
-                  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3">
-                    <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: accentColor }} />
-                    <div>
-                      <p className="font-medium text-foreground">LatAm Headquarters</p>
-                      <p className="text-muted-foreground text-sm">
-                        Coronel Niceto Vega 4736, Buenos Aires, Argentina
-                      </p>
-                    </div>
+              {/* Platforms & Infrastructure */}
+              <div className="w-full">
+                <h3 className="text-sm font-semibold text-foreground mb-3 uppercase tracking-wider text-muted-foreground">
+                  Supported Networks & S2S Tracking Stack
+                </h3>
+                <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                  {supportedPlatforms.map((platform) => (
+                    <span 
+                      key={platform}
+                      className="px-3 py-1 text-xs font-medium rounded-md bg-secondary text-secondary-foreground border border-border"
+                    >
+                      {platform}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Location & Response SLA */}
+              <div className="space-y-4 pt-2">
+                <div className="flex items-start gap-3 text-left">
+                  <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" style={{ color: accentColor }} />
+                  <div>
+                    <p className="font-medium text-foreground">LatAm Operating Hub</p>
+                    <p className="text-muted-foreground text-sm">
+                      Coronel Niceto Vega 4736, Buenos Aires, Argentina
+                    </p>
                   </div>
+                </div>
+
+                <div className="flex items-center gap-3 text-left">
+                  <Zap className="w-5 h-5 flex-shrink-0" style={{ color: accentColor }} />
+                  <p className="text-xs text-muted-foreground">
+                    Guaranteed response within <strong className="text-foreground">24 hours</strong>. Dedicated Slack/Telegram syncs provided upon partnership.
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Form Block: order-1 on mobile (appears first), lg:order-2 on desktop (right side) */}
+          {/* Form Block */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -132,9 +177,6 @@ export function ContactSection() {
                   }
                   required
                   className="bg-card border-border"
-                  style={{ 
-                    outlineColor: accentColor,
-                  }}
                 />
               </div>
               <div>
@@ -147,38 +189,41 @@ export function ContactSection() {
                   }
                   required
                   className="bg-card border-border"
-                  style={{ 
-                    outlineColor: accentColor,
-                  }}
                 />
               </div>
               <div>
                 <Input
                   type="url"
-                  placeholder="Company Website (Optional)"
+                  placeholder="Company Website or Brand URL"
                   value={formState.website}
                   onChange={(e) =>
                     setFormState({ ...formState, website: e.target.value })
                   }
                   className="bg-card border-border"
-                  style={{ 
-                    outlineColor: accentColor,
-                  }}
                 />
               </div>
               <div>
+                <select
+                  value={formState.budget}
+                  onChange={(e) => setFormState({ ...formState, budget: e.target.value })}
+                  className="w-full h-10 px-3 py-2 text-sm rounded-md bg-card border border-border text-foreground focus:outline-none"
+                >
+                  <option value="< $10k/mo">Estimated Monthly Ad Spend: &lt; $10k/mo</option>
+                  <option value="$10k - $50k/mo">Estimated Monthly Ad Spend: $10k - $50k/mo</option>
+                  <option value="$50k - $150k/mo">Estimated Monthly Ad Spend: $50k - $150k/mo</option>
+                  <option value="$150k+/mo">Estimated Monthly Ad Spend: $150k+/mo</option>
+                </select>
+              </div>
+              <div>
                 <Textarea
-                  placeholder="Tell us about your brand and current licensing (monthly deposit volume, ad spend targets, or current bottlenecks)..."
+                  placeholder="Tell us about your target GEOs, main growth bottlenecks, or specific acquisition channels (e.g. Meta, Native, Voluum tracking, Coinzilla)..."
                   value={formState.message}
                   onChange={(e) =>
                     setFormState({ ...formState, message: e.target.value })
                   }
                   required
-                  rows={8}
-                  className="bg-card border-border resize-none min-h-[180px]"
-                  style={{ 
-                    outlineColor: accentColor,
-                  }}
+                  rows={6}
+                  className="bg-card border-border resize-none min-h-[150px]"
                 />
               </div>
 
@@ -186,7 +231,7 @@ export function ContactSection() {
                 <motion.div 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="font-medium py-4 text-center rounded-full"
+                  className="font-medium py-4 text-center rounded-xl bg-[#f6b848]/10 border border-[#f6b848]/30"
                   style={{ color: accentColor }}
                 >
                   Strategy request received! Our growth team will reach out in under 24 hours.
@@ -197,7 +242,7 @@ export function ContactSection() {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full py-3.5 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition-opacity disabled:opacity-50"
+                  className="w-full py-3.5 rounded-full font-semibold inline-flex items-center justify-center gap-2 transition-opacity disabled:opacity-50 cursor-pointer"
                   style={{ 
                     backgroundColor: accentColor, 
                     color: "#202020" 
