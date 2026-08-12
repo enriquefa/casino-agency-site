@@ -81,12 +81,12 @@ export function HeroSection() {
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-tight max-w-4xl mx-auto"
         >
-          Senior Media Buyers Only. <br className="hidden sm:block" />
-          <span className="text-[#f6b848]">Certified Accounts. No Hand-Offs.</span>
+          Dominate New Markets with <br className="hidden sm:block" />
+          <span className="text-[#f6b848]">with High-Converting Casino & Crypto Ads.</span>
         </motion.h1>
  
         <p className="max-w-xl mx-auto text-base md:text-xl text-muted-foreground mb-8 md:mb-10 text-pretty px-2 leading-relaxed">
-          A Latin America–based team of senior media buyers running certified Google, Meta, and TikTok campaigns — plus affiliate and programmatic — for licensed casino, sportsbook, and crypto brands. Same time zone, same person on your account from day one.
+         We scale iGaming, Casino, and Crypto brands globally. Through data-driven media buying on Meta, Google, TikTok, and Snapchat, we acquire high-value players and investors in untapped markets.
         </p>
  
         {/* --- ACTIONS BUTTON CONTAINER --- */}
