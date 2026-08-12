@@ -3,13 +3,13 @@
 import { motion } from "framer-motion"
 import { CheckCircle } from "lucide-react"
 
-// 🌟 HIGH-CONVERTING IGAMING & CRYPTO FEATURES
+// 🌟 FULL-STACK IGAMING & CRYPTO GROWTH FEATURES
 const features = [
-  "Weekly creative production, not quarterly",
-  "Blended ROAS & Cost-per-FTD Optimization",
-  "Senior-only media buying — Google, Meta, TikTok certification specialists",
-  "Affiliate & programmatic infrastructure built in-house",
-  "Bilingual LatAm Growth Experts",
+  "Omnichannel Buying: Meta, Google, TikTok, Taboola & Coinzilla",
+  "Precision S2S Tracking Integration via Voluum & RedTrack",
+  "Blended Cost-per-FTD & Player LTV Optimization",
+  "Rapid Native & Display Creative Iteration",
+  "LatAm & Emerging Market Scaling Specialists",
 ]
 
 const containerVariants = {
@@ -56,17 +56,17 @@ export function AboutSection() {
             About Us
           </motion.span>
           
-          {/* 🌟 PREMIUM HEADLINE */}
+          {/* 🌟 MARKET-POSITIONED HEADLINE */}
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-            Senior by Default, <span className="text-[#f6b848]">Not by Upgrade.</span>
+            Beyond Meta & Google: <span className="text-[#f6b848]">True Omnichannel Scale.</span>
           </h2>
           
-          {/* 🌟 POSITIONING HOOKS */}
+          {/* 🌟 MARKET ANALYSIS & POSITIONING */}
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-            Most agencies staff your account with whoever's available and call it 'account management.' Marote is built the other way, every media buyer, creative, and compliance specialist on the team has already run performance campaigns in regulated, high-risk verticals before joining. You're never the account someone's learning the certification process on.
+            Relying solely on Meta and Google leaves iGaming and Crypto brands vulnerable to sudden ad bans and performance caps. At <strong className="text-foreground font-semibold">Ads BlackJack</strong>, we build resilient acquisition engines across mainstream social, native discovery networks like <strong className="text-foreground font-medium">Taboola</strong>, and dedicated Web3/Crypto platforms like <strong className="text-foreground font-medium">Coinzilla</strong>.
           </p>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Based entirely across Latin America, the team works inside your operating hours, joins your Slack, and tracks every certification renewal before it becomes a suspended account.
+            High-risk acquisition requires flawless tracking. We deploy Server-to-Server (S2S) attribution platforms like <strong className="text-foreground font-medium">Voluum</strong> and <strong className="text-foreground font-medium">RedTrack</strong> to eliminate postback loss, track post-registration behavior, and maximize First-Time Depositor (FTD) conversion rates in real time.
           </p>
 
           <motion.div 
