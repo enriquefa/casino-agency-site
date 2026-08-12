@@ -39,7 +39,7 @@ export function Header() {
               alt="Ads BlackJack"
               width={140}
               height={40}
-              className="h-8 w-auto"
+              className="h-16 w-auto" /* <-- Updated height class here */
               priority
             />
           </Link>
