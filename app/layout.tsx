@@ -14,10 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Marote Agency | Digital Campaigns Engineered for Sales',
-  description: 'Marote Agency delivers data-driven digital marketing campaigns — Google Ads, Social Media Advertising, and Web Design that converts. Offices in Argentina and Spain.',
+  title: 'Ads BlackJack | iGaming & Crypto Performance Agency',
+  description: 'Ads BlackJack scales iGaming, Casino, and Crypto brands into new markets with targeted paid ad campaigns across Meta, Google, TikTok, and Snapchat.',
   alternates: {
-    canonical: 'https://maroteagency.com/',
+    canonical: 'https://adsblackjack.com/',
+  },
+  icons: {
+    icon: '/images/ads-logo-gold.png',
   },
 }
 
