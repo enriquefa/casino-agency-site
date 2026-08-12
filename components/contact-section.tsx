@@ -92,7 +92,7 @@ export function ContactSection() {
                   style={{ color: accentColor }}
                 >
                   <Mail className="w-4 h-4" />
-                  growth@maroteagency.com
+                
                 </a>
               </div>
 
