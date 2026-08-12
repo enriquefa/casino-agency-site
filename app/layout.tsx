@@ -16,6 +16,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Ads BlackJack | iGaming & Crypto Performance Agency',
   description: 'Ads BlackJack scales iGaming, Casino, and Crypto brands into new markets with targeted paid ad campaigns across Meta, Google, TikTok, and Snapchat.',
+  keywords: [
+    'iGaming performance marketing',
+    'crypto advertising agency',
+    'online casino media buying',
+    'sportsbook user acquisition',
+    'iGaming Google Ads certification',
+    'crypto PPC agency',
+    'casino paid social agency',
+    'FTD optimization agency',
+  ],
   alternates: {
     canonical: 'https://adsblackjack.com/',
   },
