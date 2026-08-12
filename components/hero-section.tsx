@@ -75,18 +75,18 @@ export function HeroSection() {
         <motion.span 
           className="inline-block px-3.5 py-1 mb-5 text-xs md:text-sm font-medium text-[#f6b848] bg-[#f6b848]/10 rounded-full border border-[#f6b848]/20"
         >
-          Ecommerce Performance Agency
+          iGaming & Crypto Performance Agency
         </motion.span>
  
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-tight max-w-4xl mx-auto"
         >
           Senior Media Buyers Only. <br className="hidden sm:block" />
-          <span className="text-[#f6b848]">No Juniors, No Hand-Offs.</span>
+          <span className="text-[#f6b848]">Certified Accounts. No Hand-Offs.</span>
         </motion.h1>
  
         <p className="max-w-xl mx-auto text-base md:text-xl text-muted-foreground mb-8 md:mb-10 text-pretty px-2 leading-relaxed">
-          A Latin America–based team of senior media buyers running Meta, Google, and TikTok Ads for Shopify and Wix ecommerce brands, working inside your time zone, with the same person on your account from day one.
+          A Latin America–based team of senior media buyers running certified Google, Meta, and TikTok campaigns — plus affiliate and programmatic — for licensed casino, sportsbook, and crypto brands. Same time zone, same person on your account from day one.
         </p>
  
         {/* --- ACTIONS BUTTON CONTAINER --- */}
@@ -118,7 +118,7 @@ export function HeroSection() {
       <div className="w-full py-12 bg-background/40 backdrop-blur-md overflow-hidden z-20 mt-auto">
         <div className="max-w-7xl mx-auto px-4 mb-6 md:mb-8">
           <p className="text-center text-[9px] md:text-[10px] font-bold tracking-widest uppercase text-muted-foreground/40">
-            Expert Integration with Your E-commerce Stack
+            Expert Integration with Your iGaming & Crypto Stack
           </p>
         </div>
  
@@ -130,14 +130,15 @@ export function HeroSection() {
           >
             {[...Array(2)].map((_, setIndex) => (
               <React.Fragment key={setIndex}>
-                <img src="/logo/shopify.png" alt="Shopify" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
-                <img src="/logo/woocommerce.png" alt="WooCommerce" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
-                <img src="/logo/wix.png" alt="Wix" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
-                <img src="/logo/squarespace.png" alt="Squarespace" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                {/* TODO: source real logo assets for these 5 — filenames below are placeholders */}
                 <img src="/logo/meta.png" alt="Meta Ads" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
                 <img src="/logo/google.png" alt="Google Ads" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
                 <img src="/logo/tiktok.png" alt="TikTok Ads" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
-                <img src="/logo/amazon.png" alt="Amazon Ads" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                <img src="/logo/voluum.png" alt="Voluum" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                <img src="/logo/redtrack.png" alt="RedTrack" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                <img src="/logo/everflow.png" alt="Everflow" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                <img src="/logo/coinzilla.png" alt="Coinzilla" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
+                <img src="/logo/taboola.png" alt="Taboola" className="h-16 md:h-24 w-auto object-contain shrink-0 aspect-[2/1]" />
               </React.Fragment>
             ))}
           </motion.div>

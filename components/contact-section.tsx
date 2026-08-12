@@ -78,7 +78,7 @@ export function ContactSection() {
           >
             <div className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to scale your store and protect your margins? Drop your details below to lock in a performance consultation with our growth team.
+                Ready to scale your casino, sportsbook, or crypto brand without risking your ad accounts? Drop your details below to lock in a compliance-first performance consultation with our growth team.
               </p>
 
               <div>
@@ -168,7 +168,7 @@ export function ContactSection() {
               </div>
               <div>
                 <Textarea
-                  placeholder="Tell us about your e-commerce store (Monthly revenue, ad spend targets, or current bottlenecks)..."
+                  placeholder="Tell us about your brand and current licensing (monthly deposit volume, ad spend targets, or current bottlenecks)..."
                   value={formState.message}
                   onChange={(e) =>
                     setFormState({ ...formState, message: e.target.value })

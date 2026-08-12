@@ -3,13 +3,13 @@
 import { motion } from "framer-motion"
 import { CheckCircle } from "lucide-react"
 
-// 🌟 HIGH-CONVERTING E-COM FEATURES
+// 🌟 HIGH-CONVERTING IGAMING & CRYPTO FEATURES
 const features = [
 
   "Weekly creative production, not quarterly",
-  "Blended ROAS & Margin Optimization",
-  "Senior-only media buying — Meta, Google, TikTok",
-  "Native US time zone overlap",
+  "Blended ROAS & Cost-per-FTD Optimization",
+  "Senior-only media buying — Google, Meta, TikTok certification specialists",
+  "Affiliate & programmatic infrastructure built in-house",
   "Bilingual LatAm Growth Experts",
 ]
 
@@ -64,10 +64,10 @@ export function AboutSection() {
           
           {/* 🌟 POSITIONING HOOKS */}
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-           Most agencies staff your account with whoever's available and call it 'account management.' Marote is built the other way, every media buyer, creative, and CRO specialist on the team has already managed multiple ecommerce accounts before joining. You're never the account someone's training on.
+           Most agencies staff your account with whoever's available and call it 'account management.' Marote is built the other way, every media buyer, creative, and compliance specialist on the team has already run performance campaigns in regulated, high-risk verticals before joining. You're never the account someone's learning the certification process on.
           </p>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            Based entirely across Latin America, the team works inside your US business hours, joins your Slack, and shows up in your inbox before most agencies have finished their coffee.
+            Based entirely across Latin America, the team works inside your operating hours, joins your Slack, and tracks every certification renewal before it becomes a suspended account.
           </p>
 
           <motion.div 
