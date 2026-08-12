@@ -35,8 +35,8 @@ export function Header() {
           {/* Logo element */}
           <Link href="#" onClick={scrollToTop} className="flex items-center gap-2">
             <Image
-              src="/images/marote-logo-gold.png"
-              alt="Marote Agency"
+              src="/images/ads-logo-gold.png"
+              alt="Ads BlackJack"
               width={140}
               height={40}
               className="h-8 w-auto"
@@ -62,7 +62,7 @@ export function Header() {
             {/* Desktop Cal.com Trigger Button */}
             <button
               type="button"
-              data-cal-link="marote/strategy-call"
+              data-cal-link="https://cal.com/adsblackjack/free-strategy-session"
               data-cal-config='{"layout":"month_view"}'
               className="px-5 py-2.5 text-sm font-semibold rounded-full transition-colors cursor-pointer"
               style={{ 
@@ -112,7 +112,7 @@ export function Header() {
               {/* Mobile Cal.com Trigger Button */}
               <button
                 type="button"
-                data-cal-link="marote/strategy-call"
+                data-cal-link="https://cal.com/adsblackjack/free-strategy-session"
                 data-cal-config='{"layout":"month_view"}'
                 onClick={() => setIsMenuOpen(false)}
                 className="px-5 py-2.5 text-sm font-semibold rounded-full w-fit transition-colors text-left cursor-pointer"

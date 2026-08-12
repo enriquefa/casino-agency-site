@@ -6,7 +6,7 @@ import { ArrowRight, MessageSquare } from "lucide-react"
 import Link from "next/link"
  
 // ⚙️ QUICK CONFIGURATION
-const CAL_COM_SLUG = "https://cal.com/enrique-wstcvy/adsblackjack-free-strategy-sesion" // <-- Your official clean link!
+const CAL_COM_SLUG = "https://cal.com/adsblackjack/free-strategy-session" // <-- Your official clean link!
 const ZOHO_EMAIL = "enrique@maroteagency.com"          // <-- Your professional Zoho inbox
  
 export function HeroSection() {
@@ -81,7 +81,7 @@ export function HeroSection() {
         <motion.h1
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground mb-6 leading-tight max-w-4xl mx-auto"
         >
-          Dominate New Markets with <br className="hidden sm:block" />
+          Dominate New Markets <br className="hidden sm:block" />
           <span className="text-[#f6b848]">with High-Converting Casino & Crypto Ads.</span>
         </motion.h1>
  
