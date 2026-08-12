@@ -5,7 +5,6 @@ import { CheckCircle } from "lucide-react"
 
 // 🌟 HIGH-CONVERTING IGAMING & CRYPTO FEATURES
 const features = [
-
   "Weekly creative production, not quarterly",
   "Blended ROAS & Cost-per-FTD Optimization",
   "Senior-only media buying — Google, Meta, TikTok certification specialists",
@@ -64,7 +63,7 @@ export function AboutSection() {
           
           {/* 🌟 POSITIONING HOOKS */}
           <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-           Most agencies staff your account with whoever's available and call it 'account management.' Marote is built the other way, every media buyer, creative, and compliance specialist on the team has already run performance campaigns in regulated, high-risk verticals before joining. You're never the account someone's learning the certification process on.
+            Most agencies staff your account with whoever's available and call it 'account management.' Marote is built the other way, every media buyer, creative, and compliance specialist on the team has already run performance campaigns in regulated, high-risk verticals before joining. You're never the account someone's learning the certification process on.
           </p>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
             Based entirely across Latin America, the team works inside your operating hours, joins your Slack, and tracks every certification renewal before it becomes a suspended account.
@@ -98,33 +97,18 @@ export function AboutSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right Column: Bleeding Edge Wrapper */}
+        {/* Right Column: Fixed Showcase Panel */}
         <div className="lg:col-span-6 xl:col-span-7 relative w-full h-[380px] sm:h-[480px] lg:h-[680px] mt-8 lg:mt-0">
           
-          {/* Container styling from image_28a381.jpg */}
           <div className="absolute inset-y-0 left-0 w-full lg:w-[60vw] overflow-hidden bg-[#1a1a1a]/40 border-y lg:border-l border-white/5">
             
-            <div className="absolute w-[140%] lg:w-[120%] h-[150%] -left-[15%] lg:-left-[10%] -top-[15%] lg:-top-[22%] origin-center select-none pointer-events-none rotate-[-8deg] lg:rotate-[-12deg]">
-              <motion.div
-                animate={{ y: ["0%", "-50%"] }}
-                transition={{
-                  ease: "linear",
-                  duration: 32,
-                  repeat: Infinity,
-                }}
-                className="flex flex-col w-full"
-              >
-                <img 
-                  src="/images/ads.avif" 
-                  alt="Marote Performance Showcase Feed Panel A"
-                  className="w-full h-auto object-cover"
-                />
-                <img 
-                  src="/images/ads.avif" 
-                  alt="Marote Performance Showcase Feed Panel B"
-                  className="w-full h-auto object-cover"
-                />
-              </motion.div>
+            {/* Fixed Image Container */}
+            <div className="absolute inset-0 w-full h-full select-none pointer-events-none">
+              <img 
+                src="/images/casino-ads.png" 
+                alt="Casino Ads Performance Showcase Feed Panel"
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Seamless Blending Gradients */}
