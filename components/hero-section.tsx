@@ -6,7 +6,7 @@ import { ArrowRight, MessageSquare } from "lucide-react"
 import Link from "next/link"
  
 // ⚙️ QUICK CONFIGURATION
-const CAL_COM_SLUG = "marote/strategy-call" // <-- Your official clean link!
+const CAL_COM_SLUG = "https://cal.com/enrique-wstcvy/adsblackjack-free-strategy-sesion" // <-- Your official clean link!
 const ZOHO_EMAIL = "enrique@maroteagency.com"          // <-- Your professional Zoho inbox
  
 export function HeroSection() {
