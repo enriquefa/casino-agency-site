@@ -8,6 +8,7 @@ interface AnimatedCounterProps {
   duration?: number
   suffix?: string
   prefix?: string
+  decimals?: number
   className?: string
 }
 
@@ -16,6 +17,7 @@ export function AnimatedCounter({
   duration = 2000,
   suffix = "",
   prefix = "",
+  decimals,
   className = "",
 }: AnimatedCounterProps) {
   const [count, setCount] = useState(0)
@@ -23,31 +25,37 @@ export function AnimatedCounter({
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const hasAnimated = useRef(false)
 
+  // Auto-detect decimal places if not explicitly passed (e.g., 4.2 -> 1 decimal place)
+  const decimalPlaces =
+    decimals ?? (end % 1 !== 0 ? end.toString().split(".")[1]?.length || 1 : 0)
+
   useEffect(() => {
     if (!isInView || hasAnimated.current) return
     hasAnimated.current = true
 
-    const startTime = Date.now()
-    const endTime = startTime + duration
+    let animationFrameId: number
+    const startTime = performance.now()
 
-    const timer = setInterval(() => {
-      const now = Date.now()
-      const remaining = Math.max(endTime - now, 0)
-      const progress = 1 - remaining / duration
+    const updateCounter = (currentTime: number) => {
+      const elapsedTime = currentTime - startTime
+      const progress = Math.min(elapsedTime / duration, 1)
 
-      // Easing function for smooth animation
+      // Easing function for smooth acceleration/deceleration
       const easeOutQuart = 1 - Math.pow(1 - progress, 4)
-      const currentCount = Math.round(easeOutQuart * end)
+      const currentCount = easeOutQuart * end
 
       setCount(currentCount)
 
-      if (remaining === 0) {
-        clearInterval(timer)
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(updateCounter)
+      } else {
         setCount(end)
       }
-    }, 16)
+    }
 
-    return () => clearInterval(timer)
+    animationFrameId = requestAnimationFrame(updateCounter)
+
+    return () => cancelAnimationFrame(animationFrameId)
   }, [isInView, end, duration])
 
   return (
@@ -58,7 +66,9 @@ export function AnimatedCounter({
       animate={isInView ? { scale: 1, opacity: 1 } : {}}
       transition={{ duration: 0.5, ease: "easeOut" }}
     >
-      {prefix}{count}{suffix}
+      {prefix}
+      {count.toFixed(decimalPlaces)}
+      {suffix}
     </motion.span>
   )
 }
