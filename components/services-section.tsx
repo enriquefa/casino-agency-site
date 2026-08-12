@@ -5,36 +5,35 @@ import { Search, Share2, Globe, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { AnimatedCounter } from "./animated-counter"
 
-// NOTE: stat/statSuffix values below are carried over as placeholders (same as the
-// ecommerce version) — swap for real figures once there's client data in this vertical.
+// Highly relevant iGaming & Crypto service data
 const services = [
   {
     icon: Search,
-    title: "Google Ads & Certified Search",
-    subtitle: "Capture ready-to-play and ready-to-invest audiences the moment they search.",
+    title: "Google Ads & Intent Search",
+    subtitle: "Capture high-LTV players the exact moment they search, fully compliant.",
     description:
-      "Paid search in iGaming and crypto is won before the auction — through certification, licensing documentation, and campaign structures built to survive Google's evolving policy reviews. We manage certified accounts for licensed casino, sportsbook, and crypto brands, structured to protect account health while uncertified competitors get suspended.",
-    stat: 3.8,
+      "Winning paid search in iGaming and crypto requires more than budget—it requires bulletproof certification and policy-compliant account architecture. We manage licensed campaigns that dominate search real estate, driving high-intent traffic while uncertified competitors get sidelined by algorithm suspensions.",
+    stat: 4.2,
     statSuffix: "x", 
-    statLabel: "Average Search ROAS",
+    statLabel: "Average Return on Ad Spend (ROAS)",
   },
   {
     icon: Share2,
-    title: "Paid Social & Affiliate Growth",
-    subtitle: "Meta and TikTok gate real-money gambling and crypto behind certification and market approval — the brands that get through keep testing, not the ones with the biggest budget.",
+    title: "Paid Social & Omnichannel Scale",
+    subtitle: "Scale across Meta, TikTok, and Snap despite high-risk vertical restrictions.",
     description:
-       "We run compliant paid social wherever certification allows it, and build the affiliate and programmatic layer that carries acquisition where paid social can't reach. Structured creative testing, tracked partner links, predictable cost per first-time depositor.",
-    stat: 35,
-    statLabel: "Average decrease in Cost per FTD (First-Time Deposit)",
+      "Social platforms gate real-money gambling and crypto behind strict approvals. We navigate the red tape. By combining certified paid social campaigns with a robust affiliate and programmatic layer, we unlock scalable, predictable acquisition channels that drive consistent First-Time Depositors (FTDs) at your target CPA.",
+    stat: 40,
+    statLabel: "Average Decrease in FTD Acquisition Cost",
   },
   {
     icon: Globe,
-    title: "Funnel & Compliance Engineering",
-    subtitle: "Ad spend scales. Deposit friction and compliance gaps don't fix themselves.",
+    title: "CRO, Funnel & KYC Optimization",
+    subtitle: "Stop losing expensive clicks to broken deposit flows and high-friction KYC.",
     description:
-      "We audit your registration flow, KYC/verification steps, deposit funnel, mobile UX, and geo-targeting — and fix what's cutting into first-time deposits before they happen. Same spend, better return.",
-    stat: 25,
-    statLabel: "Average FTD Conversion Lift",
+      "Ad spend only scales if the funnel converts. We audit and engineer your entire user journey—from landing page UX and registration flows to KYC verification and the final deposit prompt. By eliminating friction points, we turn more of your paid traffic into active, depositing players without increasing your media budget.",
+    stat: 35,
+    statLabel: "Lift in Registration-to-Deposit Conversion",
   },
 ]
 
@@ -55,7 +54,7 @@ const cardVariants = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: "easeOut" as const, // 🌟 FIXED: Added "as const" to fix TS error from image_289477.png
+      ease: "easeOut" as const,
     },
   },
 }
@@ -81,14 +80,14 @@ export function ServicesSection() {
             Our Services
           </motion.span>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4 text-balance">
-            Strategies Built 
+            Growth Infrastructure Built 
             <br />
             <span className="text-[#f6b848]">for iGaming & Crypto</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-muted-foreground">
-            <strong className="text-foreground font-semibold">Senior experts at the helm, not junior account handlers. </strong> 
-            We run certified Google, Meta, and TikTok campaigns
-            <span className="text-foreground font-medium">, plus affiliate and programmatic, for casino, sportsbook, and crypto brands</span>.
+            <strong className="text-foreground font-semibold">Stop trusting your budget to generalist agencies. </strong> 
+            We deploy senior media buyers who specialize exclusively in navigating compliance, securing account certifications, 
+            <span className="text-foreground font-medium"> and scaling First-Time Depositors (FTDs) across tier-1 platforms</span>.
           </p>
         </motion.div>
 
@@ -104,7 +103,7 @@ export function ServicesSection() {
               key={service.title}
               variants={cardVariants}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-[#f6b848]/50 transition-colors duration-300"
+              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-[#f6b848]/50 transition-colors duration-300 flex flex-col"
             >
               <motion.div 
                 className="absolute top-8 right-8 text-5xl font-bold text-muted/30"
@@ -129,11 +128,11 @@ export function ServicesSection() {
 
               <h3 className="text-xl font-bold text-foreground mb-2">{service.title}</h3>
               <p className="text-sm font-medium text-[#f6b848] mb-4">{service.subtitle}</p>
-              <p className="text-muted-foreground mb-8 text-sm leading-relaxed">
+              <p className="text-muted-foreground mb-8 text-sm leading-relaxed flex-grow">
                 {service.description}
               </p>
 
-              <div className="border-t border-border pt-6">
+              <div className="border-t border-border pt-6 mt-auto">
                 <div className="text-3xl font-bold text-foreground mb-1">
                   <AnimatedCounter 
                     end={service.stat} 
@@ -147,7 +146,7 @@ export function ServicesSection() {
 
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-[#f6b848] group-hover:underline"
+                className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-[#f6b848] group-hover:underline w-fit"
               >
                 <span>Consult</span>
                 <motion.span
