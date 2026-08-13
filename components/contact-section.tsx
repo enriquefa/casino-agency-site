@@ -95,11 +95,11 @@ export function ContactSection() {
                     <Mail className="w-4 h-4" style={{ color: accentColor }} /> Growth Email
                   </h3>
                   <a
-                    href="mailto:growth@maroteagency.com"
+                    href="mailto:growth@adsblackjack.com"
                     className="text-sm hover:underline font-medium break-all"
                     style={{ color: accentColor }}
                   >
-                    growth@maroteagency.com
+                    growth@adsblackjack.com
                   </a>
                 </div>
 
