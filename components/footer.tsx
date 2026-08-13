@@ -8,8 +8,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-4">
             <Image
-              src="/images/marote-logo-gold.png"
-              alt="Marote Agency"
+              src="\images\ads-logo-gold.png"
+              alt="Ads BlackJack Agency"
               width={120}
               height={35}
               className="h-7 w-auto"
@@ -47,7 +47,7 @@ export function Footer() {
           </nav>
 
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Marote Agency
+            © {new Date().getFullYear()}Ads BalckJack Agency
           </p>
         </div>
       </div>
