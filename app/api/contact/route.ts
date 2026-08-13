@@ -17,7 +17,7 @@ export async function POST(req: Request) {
 
     const data = await resend.emails.send({
       from: 'Ads BlackJack <onboarding@resend.dev>',
-      to: ['growth@maroteagency.com'],
+      to: ['Enriquefalasco1@gmail.com'], // 👈 Changed to your Resend account email
       replyTo: email,
       subject: `🔥 New Strategy Request: ${name}`,
       html: `
