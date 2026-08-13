@@ -193,8 +193,8 @@ export function ContactSection() {
               </div>
               <div>
                 <Input
-                  type="url"
-                  placeholder="Company Website or Brand URL"
+                  type="text"
+                  placeholder="Company Website or Brand URL (e.g. brand.com)"
                   value={formState.website}
                   onChange={(e) =>
                     setFormState({ ...formState, website: e.target.value })
