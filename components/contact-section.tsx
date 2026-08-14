@@ -143,7 +143,7 @@ export function ContactSection() {
                   <div>
                     <p className="font-medium text-foreground">LatAm Operating Hub</p>
                     <p className="text-muted-foreground text-sm">
-                      Coronel Niceto Vega 4736, Buenos Aires, Argentina
+                      Coronel Niceto Vega 4736, Buenos Aires, Argentina.
                     </p>
                   </div>
                 </div>
