@@ -85,7 +85,7 @@ export function ContactSection() {
           >
             <div className="space-y-8 text-center lg:text-left flex flex-col items-center lg:items-start">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Ready to scale your casino, sportsbook, or crypto brand without risking your ad accounts? Lock in a performance consultation with our growth team.
+                Ready to scale your casino, sportsbook, or crypto brand without risking your ad accounts? Lock in a performance consultation with our growth team
               </p>
 
               {/* Direct Channels */}
