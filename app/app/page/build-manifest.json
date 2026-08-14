@@ -1,0 +1,22 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [
+    "static/chunks/0rj9_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_02xuhvn._.js",
+    "static/chunks/0rj9_next_dist_compiled_next-devtools_index_0~p~uad.js",
+    "static/chunks/0rj9_next_dist_compiled_react-dom_0bm17e6._.js",
+    "static/chunks/0rj9_next_dist_compiled_react-server-dom-turbopack_13xly4j._.js",
+    "static/chunks/0rj9_next_dist_compiled_03y2k76._.js",
+    "static/chunks/0rj9_next_dist_client_00hsch_._.js",
+    "static/chunks/0rj9_next_dist_13vypbg._.js",
+    "static/chunks/0vot_@swc_helpers_cjs_0f~6uad._.js",
+    "static/chunks/Downloads_marote 2026_Marote-2026_0rqeker._.js",
+    "static/chunks/turbopack-Downloads_marote 2026_Marote-2026_13tg~fu._.js"
+  ],
+  "pages": {},
+  "ampFirstPages": []
+}
